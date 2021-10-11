@@ -1,0 +1,25 @@
+.container {
+  margin: 10px 30px;
+  padding: 10px 20px;
+  background: #ffffff;
+
+  .title {
+    padding: 10px;
+    margin-bottom: 10px;
+
+    span {
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+
+  .tableCont {
+    padding: 10px;
+
+    .buttonCont {
+      .btn {
+        margin-right: 10px;
+      }
+    }
+  }
+}
