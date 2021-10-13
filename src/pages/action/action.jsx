@@ -3,6 +3,7 @@ import { Button, Checkbox, Table, Input } from "antd";
 import { SyncOutlined, PlusOutlined, EditOutlined } from "@ant-design/icons";
 import dataSource from "../../dummyData/tableData";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 //columns of table
 const columns = [
@@ -36,7 +37,9 @@ const columns = [
     key: "action",
     render: () => {
       return (
-        <Button type="primary" icon={<EditOutlined />} size="medium"></Button>
+        <Link to="/detail">
+          <Button type="primary" icon={<EditOutlined />} size="medium"></Button>
+        </Link>
       );
     },
   },
@@ -58,6 +61,8 @@ const Action = () => {
   const refreshTable = () => {
     //write api fetching here...
     setData(dataSource);
+    setCurrent(1);
+    setPageSize(10);
   };
 
   return (
@@ -77,9 +82,11 @@ const Action = () => {
             className="btn"
             onClick={refreshTable}
           ></Button>
-          <Button type="primary" icon={<PlusOutlined />} className="btn">
-            Thêm và thiết lập
-          </Button>
+          <Link to="/detail">
+            <Button type="primary" icon={<PlusOutlined />} className="btn">
+              Thêm và thiết lập
+            </Button>
+          </Link>
         </div>
         <Table
           dataSource={data}

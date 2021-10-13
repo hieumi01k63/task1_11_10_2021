@@ -1,0 +1,55 @@
+.container {
+  margin: 10px 30px;
+  padding: 10px 20px;
+  background: #ffffff;
+
+  .title {
+    padding: 10px;
+    margin-bottom: 10px;
+
+    span {
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+
+  .actionOverview {
+    padding: 10px;
+
+    .actionOverviewName,
+    .actionOverviewDesc {
+      display: flex;
+      margin-bottom: 20px;
+      span {
+        width: 15%;
+      }
+    }
+  }
+
+  .buttons {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .buttonsDate {
+      display: flex;
+
+      .buttonsDateBtn {
+        margin-right: 7px;
+      }
+    }
+
+    .buttonsAction {
+      display: flex;
+
+      .buttonsActionBtn {
+        margin-left: 7px;
+      }
+    }
+  }
+
+  .tableCont {
+    padding: 10px;
+  }
+}
